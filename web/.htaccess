@@ -1,0 +1,14 @@
+Options +FollowSymLinks
+RewriteEngine On
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+RewriteRule ^(.*)$ ./index.php?q=$1
+
+Options -MultiViews
+
+RewriteEngine On
+RewriteBase /dev/test/site_nightwish_2/web/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]

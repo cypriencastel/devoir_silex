@@ -1,0 +1,17 @@
+{{include('partials/header.twig')}}
+<div class="albums_container">
+	<div class="card_container">
+		{% for _album in albums %}
+		<div class="xs-4 sm-6 md-12">
+			<div class="custom_image_card album">
+				<h4 class="title">{{_album.name}}</h4>
+				<div class="img_container album">
+					<img class="img" src="{{_album.img}}" alt="#">
+				</div>
+				<div class="last_fm_link"><a href="{{_album.url}}">listen on last.fm</a></div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{{include('partials/footer.twig')}}

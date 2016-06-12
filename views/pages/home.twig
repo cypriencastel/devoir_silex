@@ -1,0 +1,42 @@
+{{include('partials/header.twig')}}
+<div class="news_container">
+	{% for _event in news %}
+
+	{% if _event.url_img != 'NULL' %}
+
+	<div class="custom_image_card">
+		<div class="img_container">
+			<img class="img" src="{{_event.url_img}}" alt="#">
+		</div>
+		<div class="article">
+			<header>
+				<h4 class="title">{{_event.title}}</h4>
+			</header>
+			<p>
+				{{_event.text}}
+			</p>
+			<div class="link">
+				<a href="#">this is a link</a>
+			</div>
+		</div>
+	</div>
+
+	{% else %}
+	<div class="custom_simple_card">
+		<h4 class="title">{{_event.title}}</h4>
+		<p>
+			{{_event.text}}
+		</p>	
+		<div class="link">
+			<a href="">this is a link</a>
+		</div>
+	</div>
+	{% endif %}
+
+	{% endfor %}
+</div>
+{{include('partials/footer.twig')}}
+
+
+
+

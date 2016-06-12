@@ -1,0 +1,19 @@
+{{include('partials/header.twig')}}
+<header class="biography_header">
+	<div class="band_pict_container">
+	</div>
+</header>
+<div class="biography_container">
+	<div class="infos_container show_less">
+		<div class="summary_container">
+			<h4>Summary</h4>
+			<p class="summary">{{bio.summary}}</p>
+		</div>
+		<div class="full_infos_container">
+			<h4>Full story</h4>
+			<p class="full_infos">{{bio.more}}</p>
+		</div>
+		<button class="more">show more</button>
+	</div>
+</div>
+{{include('partials/footer.twig')}}

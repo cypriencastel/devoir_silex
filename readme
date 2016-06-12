@@ -1,0 +1,66 @@
+/* Cyprien CASTEL */
+
+/*
+	**EXERCICE SILEX**
+
+	** web site about the band Nightwish **
+*/
+
+/* 
+	** FEATURES **
+*/
+	*GLOBALY*
+
+	- use of boostrap for the navbar and to setup a grid for the albums page
+	- use of database
+	- found a way to require a specific js file for a specific page (to avoid errors in the console)
+	- use of api and curl
+	- use of simplehtmldom to parse the official website
+	- silex and twig with loops and conditions
+	
+	*HOME PAGE*
+
+	- Exhaustive news on the home page parsed on the official web site of the 
+	  band thanks to the php library 'simplehtmldom'
+
+	-  News are stored in a database and refreshed every two days 
+	   to keep them updated
+
+	- use of custom cards, one if there is no image 
+	  and another if there is an image
+	
+	*BAND- BIOGRAPHY PAGE*
+
+	- Biography information of the band is from the lastfm api and 
+	  is stored in a database
+
+	- user can read a quick summary 
+	  or click on a button to reveal the full biography
+
+	*BAND- MEMBERS PAGE*
+	
+	- use of custom cards style
+	- band members information is (also) from lastfm api 
+	  and stored in the database
+	- the information will be refreshed every year in the case of a new member
+	- contains also images displayed thanks to URLs offered by the api,
+	  it avoids to store the images in the folders
+
+	*ALBUMS PAGE*
+
+	- information from lastfm api
+	- Exhaustive list of the albums
+	- responsive grid
+	- possibility to see the album on the lastfm website thanks to a link
+
+	/*
+		** PROBLEMS UNFIXED **
+	*/
+
+	- I don't know why i get an album (null) in my album page's grid
+	- if the title is too long, the grid is broken, 
+	  i could put i smaller font-size but the title would be too small
+	- the strip_tags method didn't work on the biography page, i don't know why...
+	- boostrap navbar's links list becomes a block when the 
+	  viewport width comes under 768px
+

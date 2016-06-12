@@ -1,0 +1,21 @@
+{{include('partials/header.twig')}}
+<div class="members_container">
+	{% for _member in members %}
+	<div class="xs-4 sm-6 md-12">
+		<div class="custom_image_card">
+			<div class="img_container">
+				<img class="img" src="{{_member.img_url}}" alt="#">
+			</div>
+			<div class="article">
+				<header>
+					<h4 class="title">{{_member.member_name}}</h4>
+				</header>
+				<p>
+					{{_member.infos}}
+				</p>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+{{include('partials/footer.twig')}}
